@@ -1,0 +1,73 @@
+<resources>
+    <string name="app_name">Coding</string>
+
+    <string name="phoneHint">(ХХХ) ХХ-ХХ-ХХ</string>
+    <string name="iagreetext">Я прочитал и согласен со всеми пользовательскими соглашениями</string>
+    <string name="loginorauth">Авторизация</string>
+    <string name="codeSent">На Ваш номер был выслан код для входа</string>
+    <string name="didnotgetcode">Не получил код</string>
+
+    <string name="yesterday">Вчера</string>
+    <string name="jan">Янв</string>
+    <string name="dec">Дек</string>
+    <string name="nov">Ноя</string>
+    <string name="oct">Окт</string>
+    <string name="sep">Сен</string>
+    <string name="aug">Авг</string>
+    <string name="july">Июль</string>
+    <string name="june">Июнь</string>
+    <string name="may">Май</string>
+    <string name="apr">Апр</string>
+    <string name="march">Март</string>
+    <string name="feb">Фев</string>
+
+    <string name="y">г</string>
+    <string name="m">мес</string>
+    <string name="d">д</string>
+    <string name="h">ч</string>
+    <string name="min">мин</string>
+    <string name="s">сек</string>
+
+    <string name="today">Сегодня</string>
+    <string name="ddMMyyyy">dd.MM.yyyy</string>
+    <string name="errorTryAgain">Произошла ошибка! Пожалуйста повторите заново!</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="uploadProfilePhoto">Загрузить фото профиля</string>
+    <string name="fullname">Имя / Ник</string>
+    <string name="save">Сохранить</string>
+    <string name="requiredField">Это обязательное поле!</string>
+    <string name="waitForImageLoad">Дождитесь загрузки фото!</string>
+    <string name="home">Главная</string>
+    <string name="lectures">Лекции</string>
+    <string name="profile">Профиль</string>
+    <string name="learnWithUs">Learn to code with us!</string>
+    <string name="info">Общая информация о дисциплине</string>
+    <string name="assignments">Задачи / Практика</string>
+    <string name="tests">Тесты</string>
+    <string name="nOfQuestions">количество вопросов:</string>
+    <string name="_1">1</string>
+    <string name="slash">/</string>
+    <string name="questions_">Вопрос:</string>
+    <string name="variant_a">A)</string>
+    <string name="variant_b">Б)</string>
+    <string name="variant_c">В)</string>
+    <string name="variant_d">Г)</string>
+    <string name="variant_e">E)</string>
+    <string name="prev">Пред</string>
+    <string name="next">След</string>
+    <string name="showResult">Показать результаты</string>
+    <string name="yesConfirm">Показать</string>
+    <string name="back">Назад</string>
+    <string name="result">Результат</string>
+    <string name="wrongAnswer">Неверный ответ</string>
+    <string name="emptyAnswer">Вы не ответили на этот вопрос</string>
+    <string name="trueAnswer">Провильный ответ</string>
+    <string name="image">image</string>
+    <string name="yourScore">Ваш результат</string>
+    <string name="loading">loading</string>
+    <string name="ok">OK</string>
+    <string name="userName">userName</string>
+    <string name="changeProfile">Редактировать профиль</string>
+
+</resources>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/transparent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/back_custom">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/topButton"
+            android:layout_width="42dp"
+            android:layout_height="6dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="2dp"
+            app:cardBackgroundColor="#cecece"
+            app:cardCornerRadius="4dp"
+            app:cardElevation="0dp" />
+
+        <TextView
+            android:id="@+id/textViewConf"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/topButton"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="34dp"
+            android:layout_marginTop="16sp"
+            android:layout_marginEnd="34dp"
+            android:gravity="center"
+            android:text="@string/showResult"
+            android:textColor="@color/black"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/buttonConfirm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textViewConf"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="22dp"
+            android:layout_marginBottom="12dp"
+            android:fontFamily="@font/open_sans_semibold"
+            android:gravity="center"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            android:text="@string/yesConfirm"
+            android:textColor="@color/colorPrimary"
+            android:textSize="19sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.4dp"
+            android:layout_below="@+id/buttonConfirm"
+            android:background="#cecece" />
+
+        <TextView
+            android:id="@+id/buttonCancel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/buttonConfirm"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="22dp"
+            android:fontFamily="@font/open_sans_semibold"
+            android:gravity="center"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            android:text="@string/back"
+            android:textColor="#A912202E"
+            android:textSize="19sp" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

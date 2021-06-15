@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    tools:context=".ui.login.login.LoginPhoneConfirmationFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/iagreeText">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@+id/arrBack"
+                android:layout_width="52dp"
+                android:layout_height="52dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/ic_back_ios" />
+
+            </RelativeLayout>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/logoCardView"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="76dp"
+                app:cardBackgroundColor="@color/colorWhite"
+                app:cardCornerRadius="16sp"
+                app:cardElevation="0dp">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/logo" />
+
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/codeSentText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/logoCardView"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="32dp"
+                android:text="@string/codeSent"
+                android:textColor="@color/textColorGrayish"
+                android:textSize="14sp" />
+
+            <LinearLayout
+                android:id="@+id/linearCodeActivation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/codeSentText"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="25dp"
+                android:layout_marginEnd="24dp"
+                android:layout_marginBottom="32dp"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/editText1"
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_weight="0.25"
+                    android:background="@drawable/back_phone_edit"
+                    android:cursorVisible="false"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:importantForAutofill="no"
+                    android:inputType="number"
+                    android:maxLength="1"
+                    android:textAlignment="center"
+                    android:textColor="@color/textColorMain"
+                    android:textSize="22sp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/editText2"
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_marginStart="12dp"
+                    android:layout_weight="0.25"
+                    android:background="@drawable/back_phone_edit"
+                    android:cursorVisible="false"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:importantForAutofill="no"
+                    android:inputType="number"
+                    android:maxLength="1"
+                    android:textAlignment="center"
+                    android:textColor="@color/textColorMain"
+                    android:textSize="22sp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/editText3"
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_marginStart="12dp"
+                    android:layout_weight="0.25"
+                    android:background="@drawable/back_phone_edit"
+                    android:cursorVisible="false"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:importantForAutofill="no"
+                    android:inputType="number"
+                    android:maxLength="1"
+                    android:textAlignment="center"
+                    android:textColor="@color/textColorMain"
+                    android:textSize="22sp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/editText4"
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_marginStart="12dp"
+                    android:layout_weight="0.25"
+                    android:background="@drawable/back_phone_edit"
+                    android:cursorVisible="false"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:importantForAutofill="no"
+                    android:inputType="number"
+                    android:maxLength="1"
+                    android:textAlignment="center"
+                    android:textColor="@color/textColorMain"
+                    android:textSize="22sp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/editText5"
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_marginStart="12dp"
+                    android:layout_weight="0.25"
+                    android:background="@drawable/back_phone_edit"
+                    android:cursorVisible="false"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:importantForAutofill="no"
+                    android:inputType="number"
+                    android:maxLength="1"
+                    android:textAlignment="center"
+                    android:textColor="@color/textColorMain"
+                    android:textSize="22sp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/editText6"
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_marginStart="12dp"
+                    android:layout_weight="0.25"
+                    android:background="@drawable/back_phone_edit"
+                    android:cursorVisible="false"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:importantForAutofill="no"
+                    android:inputType="number"
+                    android:maxLength="1"
+                    android:textAlignment="center"
+                    android:textColor="@color/textColorMain"
+                    android:textSize="22sp"
+                    android:textStyle="bold"
+                    tools:text="1" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/loginButton"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_below="@+id/linearCodeActivation"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="24dp"
+                android:layout_marginBottom="32dp"
+                android:background="@drawable/back_button_blue"
+                android:gravity="center"
+                android:text="@string/loginorauth"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:visibility="gone" />
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/iagreeText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="20sp"
+        android:gravity="center"
+        android:text="@string/iagreetext"
+        android:textColor="@color/textColorGrayish"
+        android:textSize="14sp" />
+
+    <RelativeLayout
+        android:id="@+id/progressBar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorWhite"
+        android:visibility="gone">
+
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

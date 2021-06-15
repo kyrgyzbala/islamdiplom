@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    tools:context=".ui.profile.ProfileFragment">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorWhite"
+        android:elevation="0dp"
+        app:elevation="0dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="12dp"
+                android:layout_marginEnd="52dp"
+                app:title="@string/profile"
+                app:titleTextColor="@color/textColorMain" />
+
+            <RelativeLayout
+                android:id="@+id/settingsButton"
+                android:layout_width="52dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentEnd="true">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/ic_setting" />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/relativeUserData"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/appbar"
+        app:layout_scrollFlags="scroll">
+
+        <RelativeLayout
+            android:id="@+id/userDataView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="22dp"
+            android:layout_marginEnd="22dp"
+            android:padding="14dp"
+            app:layout_scrollFlags="scroll">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/userAvatar"
+                android:layout_width="56dp"
+                android:layout_height="56dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/def" />
+
+            <TextView
+                android:id="@+id/userNameTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_toEndOf="@+id/userAvatar"
+                android:fontFamily="@font/open_sans_semibold"
+                android:textColor="@color/textColorMain"
+                android:textSize="15sp"
+                tools:text="@string/userName" />
+
+            <TextView
+                android:id="@+id/phoneNumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/userNameTextView"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="3dp"
+                android:layout_toEndOf="@+id/userAvatar"
+                android:textColor="@color/textColorMain"
+                android:textSize="12sp"
+                tools:text="phoneNumber" />
+
+
+            <TextView
+                android:id="@+id/editProfileButton"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:layout_below="@+id/userAvatar"
+                android:layout_marginTop="22dp"
+                android:background="@drawable/back_edit_focused"
+                android:gravity="center"
+                android:padding="6dp"
+                android:paddingStart="32dp"
+                android:paddingEnd="32dp"
+                android:text="@string/changeProfile"
+                android:textColor="@color/textColorMain"
+                android:textSize="12sp" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

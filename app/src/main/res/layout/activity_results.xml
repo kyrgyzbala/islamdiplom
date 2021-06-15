@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".ui.home.test.ResultsActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/white"
+        app:elevation="0dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:id="@+id/arrBack"
+                android:layout_width="52dp"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:contentDescription="@string/image"
+                    android:src="@drawable/ic_back_ios" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_toEndOf="@+id/arrBack"
+                android:fontFamily="@font/open_sans_semibold"
+                android:gravity="center_vertical"
+                android:text="@string/result"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <RelativeLayout
+                android:id="@+id/buttonDone"
+                android:layout_width="52dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentEnd="true">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:contentDescription="@string/image"
+                    android:src="@drawable/ic_baseline_check_24" />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/appbar"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/back_bottom_purple">
+
+        <RelativeLayout
+            android:id="@+id/relResult"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize">
+
+            <TextView
+                android:id="@+id/textViewYourScore"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="16sp"
+                android:text="@string/yourScore"
+                android:textColor="@color/colorWhite"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/resultScoreTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="12dp"
+                android:layout_marginEnd="12dp"
+                android:layout_toEndOf="@+id/textViewYourScore"
+                android:fontFamily="@font/open_sans_semibold"
+                android:textColor="@color/colorWhite"
+                android:textSize="23sp"
+                tools:text="@string/loading" />
+
+        </RelativeLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/doneButton"
+            android:layout_below="@+id/relResult"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:listitem="@layout/row_test_result" />
+
+        <TextView
+            android:id="@+id/doneButton"
+            android:layout_width="match_parent"
+            android:layout_height="34dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="22dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="22dp"
+            android:layout_marginBottom="12dp"
+            android:background="@drawable/back_edit_focused"
+            android:gravity="center"
+            android:text="@string/ok"
+            android:textColor="@color/colorWhite"
+            android:textSize="13sp" />
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

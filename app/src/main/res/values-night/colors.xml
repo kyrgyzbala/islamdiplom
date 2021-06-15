@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="colorWhite">#000</color>
+
+    <color name="colorPrimary">#1E8BF1</color>
+    <color name="colorPrimaryDark">#1E8BF1</color>
+    <color name="colorAccent">#1ba39c</color>
+    <color name="colorError">#F31F0F</color>
+    <color name="colorNotFocus">#2A3235</color>
+    <color name="ca">#FFC107</color>
+
+    <color name="textColorMain">#fff</color>
+    <color name="textColorGrayish">#99FFFFFF</color>
+
+    <color name="phoneEditBorderColor">#3A3A3C</color>
+    <color name="phoneEditFillColor">#2F2F32</color>
+    <color name="bkgInactive">#1C1C1E</color>
+
+
+    <color name="online">#4FE037</color>
+    <color name="lunch">#EB9719</color>
+    <color name="repair">#E00303</color>
+    <color name="offline">#D1D1D6</color>
+    <color name="back_bottom_main">#2F2F32</color>
+
+    <color name="chevronColor">#8E8E93</color>
+
+    <color name="statusBorderColor">#FF9900</color>
+    <color name="statusFillColor">#EB9719</color>
+
+    <color name="colorCustom">#2F2F32</color>
+    <color name="back_color_routes">#2F2F32</color>
+</resources>

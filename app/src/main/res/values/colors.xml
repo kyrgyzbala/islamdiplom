@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="colorWhite">#FFFFFF</color>
+
+    <color name="colorPrimary">#1E8BF1</color>
+    <color name="colorPrimaryDark">#0A87FB</color>
+    <color name="colorAccent">#1ba39c</color>
+    <color name="colorError">#F31F0F</color>
+    <color name="colorNotFocus">#2A3235</color>
+    <color name="ca">#FFC107</color>
+
+    <color name="textColorMain">#000</color>
+    <color name="textColorGrayish">#993C3C43</color>
+
+    <color name="phoneEditBorderColor">#D1D1D6</color>
+    <color name="phoneEditFillColor">#F8F8F8</color>
+
+    <color name="bkgInactive">#F2F2F7</color>
+    <color name="transparent">#00F44336</color>
+
+    <color name="online">#4FE037</color>
+    <color name="lunch">#EB9719</color>
+    <color name="repair">#E00303</color>
+    <color name="offline">#D1D1D6</color>
+    <color name="back_bottom_main">#fff</color>
+
+    <color name="chevronColor">#AEAEB2</color>
+
+    <color name="statusBorderColor">#EB9719</color>
+    <color name="statusFillColor">#1AEB9719</color>
+
+    <color name="colorCustom">#ffffff</color>
+    <color name="back_color_routes">#F8F8F8</color>
+    <color name="purpleBack">#865dbf</color>
+    <color name="grayish">#e5e5e5</color>
+
+</resources>
