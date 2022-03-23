@@ -20,7 +20,7 @@ class TestRecyclerViewAdapter(
 
     inner class ViewHolderTest(private val binding: RowTestBinding) :
         RecyclerView.ViewHolder(binding.root) {
-        fun onBind(current: ModelTest) {
+        fun onBind(current: ModelTest, position: Int) {
 
             val circularProgressDrawable = CircularProgressDrawable(binding.root.context)
             circularProgressDrawable.strokeWidth = 5f
@@ -32,7 +32,8 @@ class TestRecyclerViewAdapter(
                 .into(binding.iconImageView)
             binding.nameTextView.text = current.name
 
-            val noOfQuestions = "${binding.root.context.getString(R.string.nOfQuestions)}  ${current.questions}"
+            val noOfQuestions =
+                "${binding.root.context.getString(R.string.nOfQuestions)}  ${current.questions}"
             binding.questionCountTextView.text = noOfQuestions
 
             binding.descriptionTextView.text = current.description
@@ -50,7 +51,7 @@ class TestRecyclerViewAdapter(
     }
 
     override fun onBindViewHolder(holder: ViewHolderTest, position: Int, model: ModelTest) {
-        holder.onBind(model)
+        holder.onBind(model, position)
     }
 
     interface TestRecyclerClickListener {

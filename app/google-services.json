@@ -1,41 +1,41 @@
 {
   "project_info": {
-    "project_number": "287162405574",
-    "project_id": "programming-63c07",
-    "storage_bucket": "programming-63c07.appspot.com"
+    "project_number": "620601426743",
+    "project_id": "islamdiplom-449ce",
+    "storage_bucket": "islamdiplom-449ce.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:287162405574:android:7ab490baa95355ab4bfdc7",
+        "mobilesdk_app_id": "1:620601426743:android:88c34f259767a43f6550b2",
         "android_client_info": {
           "package_name": "kg.programm.programmingapp"
         }
       },
       "oauth_client": [
         {
-          "client_id": "287162405574-7mugodag86c4ssfi5cktvr63igm6bfh8.apps.googleusercontent.com",
+          "client_id": "620601426743-tnmch17jg68qokmgsa5cl0l02duvp739.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
             "package_name": "kg.programm.programmingapp",
-            "certificate_hash": "704d52e74f8229b078eb580f8d5678edae083338"
+            "certificate_hash": "f63941ac4640b2b432887bad86ee53919a9c90ec"
           }
         },
         {
-          "client_id": "287162405574-vsbloophqt7pf45f041g1kp0g40fr7mc.apps.googleusercontent.com",
+          "client_id": "620601426743-cdvcmts49b3i4glf2sodfbhf5ue88d29.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyDPoEZg-jnluv5h46KhJ9NEvSTF0IqFTfM"
+          "current_key": "AIzaSyDh75N0QcUhqBTcJq1ZF05Lpcpl4_3QV4c"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "287162405574-vsbloophqt7pf45f041g1kp0g40fr7mc.apps.googleusercontent.com",
+              "client_id": "620601426743-cdvcmts49b3i4glf2sodfbhf5ue88d29.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

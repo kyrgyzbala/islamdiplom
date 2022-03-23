@@ -19,7 +19,7 @@ class TaskDetailActivity : AppCompatActivity() {
         setContentView(binding.root)
         window.statusBarColor = ContextCompat.getColor(this, R.color.colorWhite)
 
-        val currentTask = intent.getParcelableExtra<ModelTask>(EXTRA_TASK) as ModelTask
+        val currentTask = intent.getSerializableExtra(EXTRA_TASK) as ModelTask
 
         binding.titleTextView.text = currentTask.name
 

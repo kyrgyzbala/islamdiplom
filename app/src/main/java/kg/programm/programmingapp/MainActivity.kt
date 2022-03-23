@@ -1,15 +1,15 @@
 package kg.programm.programmingapp
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.MenuItem
+import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import androidx.viewpager2.widget.ViewPager2
-import com.google.android.material.bottomnavigation.BottomNavigationView
+import com.google.android.material.navigation.NavigationBarView
 import kg.programm.programmingapp.databinding.ActivityMainBinding
 import kg.programm.programmingapp.ui.main.MainPagerAdapter
 
-class MainActivity : AppCompatActivity(), BottomNavigationView.OnNavigationItemSelectedListener {
+class MainActivity : AppCompatActivity(), NavigationBarView.OnItemSelectedListener {
 
     private lateinit var binding: ActivityMainBinding
 
@@ -22,7 +22,7 @@ class MainActivity : AppCompatActivity(), BottomNavigationView.OnNavigationItemS
         window.statusBarColor = ContextCompat.getColor(this, R.color.colorWhite)
 
         viewPagerListener()
-        binding.navBottomView.setOnNavigationItemSelectedListener(this)
+        binding.navBottomView.setOnItemSelectedListener(this)
         sectionPagerAdapter = MainPagerAdapter(this)
         binding.viewPager.adapter = sectionPagerAdapter
         binding.viewPager.isUserInputEnabled = false

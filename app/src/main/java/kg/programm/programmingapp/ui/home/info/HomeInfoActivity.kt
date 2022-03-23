@@ -1,11 +1,10 @@
 package kg.programm.programmingapp.ui.home.info
 
-import android.os.Build
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.Html
 import android.text.method.LinkMovementMethod
 import android.text.util.Linkify
+import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import com.google.firebase.firestore.FirebaseFirestore
 import kg.programm.programmingapp.R
@@ -27,14 +26,9 @@ class HomeInfoActivity : AppCompatActivity() {
 
         FirebaseFirestore.getInstance().collection("infodis").document("info")
             .get().addOnSuccessListener {
-                val infoText = it.getString("info")
-                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
-                    binding.textView.text =
-                        Html.fromHtml(infoText, Html.FROM_HTML_MODE_COMPACT)
-                } else {
-                    @Suppress("DEPRECATION")
-                    binding.textView.text = Html.fromHtml(infoText)
-                }
+                val infoText = it.getString("info") ?: ""
+                binding.textView.text =
+                    Html.fromHtml(infoText, Html.FROM_HTML_MODE_COMPACT)
                 Linkify.addLinks(binding.textView, Linkify.ALL)
                 binding.textView.movementMethod = LinkMovementMethod.getInstance()
             }

@@ -30,7 +30,7 @@ class LecturesActivity : AppCompatActivity(), LecturesRecyclerViewAdapter.Lectur
             onBackPressed()
         }
         val category =
-            intent.getParcelableExtra<ModelLectureCats>(EXTRA_LEC_CAT) as ModelLectureCats
+            intent.getSerializableExtra(EXTRA_LEC_CAT) as ModelLectureCats
         binding.titleTextView.text = category.name
 
         val query = FirebaseFirestore.getInstance().collection("lectures")
