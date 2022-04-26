@@ -18,7 +18,6 @@ import kg.programm.programmingapp.util.EXTRA_VIDEO_URL
 class LecturesActivity : AppCompatActivity(), LecturesRecyclerViewAdapter.LectureRecyclerListener {
 
     private lateinit var binding: ActivityLecturesBinding
-
     private var adapter: LecturesRecyclerViewAdapter? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -35,24 +34,16 @@ class LecturesActivity : AppCompatActivity(), LecturesRecyclerViewAdapter.Lectur
 
         val query = FirebaseFirestore.getInstance().collection("lectures")
             .whereEqualTo("category", category.id)
-            .orderBy("order", Query.Direction.ASCENDING)
-        val options: FirestoreRecyclerOptions<ModelLecture> =
-            FirestoreRecyclerOptions.Builder<ModelLecture>()
-                .setQuery(query, ModelLecture::class.java).build()
-        adapter = LecturesRecyclerViewAdapter(options, this)
-        binding.recyclerView.adapter = adapter
+        query.get().addOnSuccessListener {
+            val lectures = mutableListOf<ModelLecture>()
+            for (q in it) {
+                lectures.add(q.toObject(ModelLecture::class.java))
+            }
+            adapter = LecturesRecyclerViewAdapter(this)
+            binding.recyclerView.adapter = adapter
+            adapter?.submitList(lectures)
+        }
 
-        adapter?.startListening()
-    }
-
-    override fun onResume() {
-        super.onResume()
-        adapter?.startListening()
-    }
-
-    override fun onStop() {
-        super.onStop()
-        adapter?.stopListening()
     }
 
     override fun onLectureClick(link: String) {

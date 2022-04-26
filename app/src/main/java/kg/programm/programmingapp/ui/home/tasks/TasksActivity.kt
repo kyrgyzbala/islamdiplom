@@ -28,23 +28,18 @@ class TasksActivity : AppCompatActivity(), TasksRecyclerViewAdapter.TaskRecycler
         }
 
         val query = FirebaseFirestore.getInstance().collection("tasks")
-        val options: FirestoreRecyclerOptions<ModelTask> =
-            FirestoreRecyclerOptions.Builder<ModelTask>().setQuery(query, ModelTask::class.java)
-                .build()
-        adapter = TasksRecyclerViewAdapter(options, this)
-        binding.recyclerView.adapter = adapter
-        adapter?.startListening()
+        query.get().addOnSuccessListener {
+            val tasks = mutableListOf<ModelTask>()
+            for (q in it) {
+                tasks.add(q.toObject(ModelTask::class.java))
+            }
+            adapter = TasksRecyclerViewAdapter(this)
+            binding.recyclerView.adapter = adapter
+            adapter?.submitList(tasks)
+        }
+
     }
 
-    override fun onResume() {
-        super.onResume()
-        adapter?.startListening()
-    }
-
-    override fun onStop() {
-        super.onStop()
-        adapter?.stopListening()
-    }
 
     override fun onTaskClick(current: ModelTask) {
         Intent(this, TaskDetailActivity::class.java).let { intent ->

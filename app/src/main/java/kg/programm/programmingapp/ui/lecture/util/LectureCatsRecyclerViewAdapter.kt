@@ -3,25 +3,25 @@ package kg.programm.programmingapp.ui.lecture.util
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.core.content.ContextCompat
+import androidx.recyclerview.widget.DiffUtil
+import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
-import com.firebase.ui.firestore.FirestoreRecyclerAdapter
-import com.firebase.ui.firestore.FirestoreRecyclerOptions
 import kg.programm.programmingapp.R
 import kg.programm.programmingapp.data.lectures.ModelLectureCats
 import kg.programm.programmingapp.databinding.RowLectureCatsBinding
 
 class LectureCatsRecyclerViewAdapter(
-    options: FirestoreRecyclerOptions<ModelLectureCats>,
     private val listener: LectureCatsListener
-) : FirestoreRecyclerAdapter<ModelLectureCats, LectureCatsRecyclerViewAdapter.ViewHolderLC>(options) {
+) : ListAdapter<ModelLectureCats, LectureCatsRecyclerViewAdapter.ViewHolderLC>(DIFF) {
 
     private var _binding: RowLectureCatsBinding? = null
 
     inner class ViewHolderLC(private val binding: RowLectureCatsBinding) :
         RecyclerView.ViewHolder(binding.root) {
 
-        fun onBind(current: ModelLectureCats) {
+        fun onBind(position: Int) {
+            val current = getItem(position)
             Glide.with(binding.root).load(current.icon)
                 .error(ContextCompat.getDrawable(binding.root.context, R.drawable.def))
                 .into(binding.iconImgView)
@@ -39,12 +39,31 @@ class LectureCatsRecyclerViewAdapter(
         return ViewHolderLC(_binding!!)
     }
 
-    override fun onBindViewHolder(holder: ViewHolderLC, position: Int, model: ModelLectureCats) {
-        holder.onBind(model)
+    override fun onBindViewHolder(holder: ViewHolderLC, position: Int) {
+        holder.onBind(position)
     }
 
     interface LectureCatsListener {
         fun onLectureCatClick(modelLectureCats: ModelLectureCats)
+    }
+
+    companion object {
+        private val DIFF = object : DiffUtil.ItemCallback<ModelLectureCats>() {
+            override fun areItemsTheSame(
+                oldItem: ModelLectureCats,
+                newItem: ModelLectureCats
+            ): Boolean {
+                return oldItem.id == newItem.id
+            }
+
+            override fun areContentsTheSame(
+                oldItem: ModelLectureCats,
+                newItem: ModelLectureCats
+            ): Boolean {
+                return oldItem.id == newItem.id
+            }
+
+        }
     }
 
 }

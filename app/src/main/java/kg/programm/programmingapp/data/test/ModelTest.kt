@@ -5,5 +5,6 @@ data class ModelTest(
     val name: String = "",
     val description: String = "",
     val questions: Int = 0,
-    val icon: String = ""
+    val icon: String = "",
+    var ref: String? = ""
 )

@@ -4,7 +4,6 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.core.content.ContextCompat
-import com.firebase.ui.firestore.FirestoreRecyclerOptions
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.Query
@@ -34,32 +33,18 @@ class TestsActivity : AppCompatActivity(), TestRecyclerViewAdapter.TestRecyclerC
         }
         initRecyclerView()
         binding.swipeRefresh.setOnRefreshListener {
-            if (adapter == null) {
-                initRecyclerView()
-            } else {
-                adapter?.startListening()
-                binding.swipeRefresh.isRefreshing = false
-            }
+            initRecyclerView()
         }
 
     }
 
-    override fun onStop() {
-        super.onStop()
-        adapter?.stopListening()
-    }
-
-    override fun onTestClick(position: Int) {
+    override fun onTestClick(position: ModelTest) {
         val user = FirebaseAuth.getInstance().currentUser
 
         if (user != null) {
-            val snapshot = adapter!!.snapshots.getSnapshot(position)
-            val ref = snapshot.reference.path
-            val name = snapshot.getString("name")
-
             Intent(this, TestActualActivity::class.java).let { intent ->
-                intent.putExtra(EXTRA_TEST_REF, ref)
-                intent.putExtra(EXTRA_TEST_NAME, name)
+                intent.putExtra(EXTRA_TEST_REF, position.ref)
+                intent.putExtra(EXTRA_TEST_NAME, position.name)
                 startActivity(intent)
             }
         } else {
@@ -72,7 +57,6 @@ class TestsActivity : AppCompatActivity(), TestRecyclerViewAdapter.TestRecyclerC
         if (adapter == null) {
             initRecyclerView()
         } else {
-            adapter?.startListening()
             binding.swipeRefresh.isRefreshing = false
         }
     }
@@ -81,16 +65,20 @@ class TestsActivity : AppCompatActivity(), TestRecyclerViewAdapter.TestRecyclerC
         val query = FirebaseFirestore.getInstance().collection("tests")
             .orderBy("id", Query.Direction.ASCENDING)
 
-        val options: FirestoreRecyclerOptions<ModelTest> =
-            FirestoreRecyclerOptions.Builder<ModelTest>().setQuery(query, ModelTest::class.java)
-                .build()
+        query.get().addOnSuccessListener {
+            val tests = mutableListOf<ModelTest>()
+            for (q in it) {
+                val temp = q.toObject(ModelTest::class.java)
+                temp.ref = q.reference.path
+                tests.add(temp)
+            }
+            adapter = TestRecyclerViewAdapter(this)
+            binding.recyclerView.adapter = adapter
+            adapter?.submitList(tests)
+            binding.progressBar.hide()
+            binding.swipeRefresh.isRefreshing = false
+        }
 
-        adapter = TestRecyclerViewAdapter(options, this)
-        binding.recyclerView.adapter = adapter
-
-        adapter?.startListening()
-        binding.progressBar.hide()
-        binding.swipeRefresh.isRefreshing = false
     }
 
 }

@@ -32,6 +32,5 @@ class HomeInfoActivity : AppCompatActivity() {
                 Linkify.addLinks(binding.textView, Linkify.ALL)
                 binding.textView.movementMethod = LinkMovementMethod.getInstance()
             }
-
     }
 }
