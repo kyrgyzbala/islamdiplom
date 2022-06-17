@@ -12,6 +12,7 @@ import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
 import kg.programm.programmingapp.R
 import kg.programm.programmingapp.databinding.FragmentProfileBinding
+import kg.programm.programmingapp.ui.splash.SplashScreenActivity
 
 
 class ProfileFragment : Fragment() {
@@ -48,6 +49,15 @@ class ProfileFragment : Fragment() {
 
         binding.editProfileButton.setOnClickListener {
             startActivity(Intent(requireContext(), EditProfileActivity::class.java))
+        }
+
+        binding.quitButton.setOnClickListener {
+            FirebaseAuth.getInstance().signOut()
+            Intent(requireContext(), SplashScreenActivity::class.java).let { intent ->
+                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
+                requireActivity().finish()
+                startActivity(intent)
+            }
         }
 
     }

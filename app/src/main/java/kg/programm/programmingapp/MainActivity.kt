@@ -25,7 +25,6 @@ class MainActivity : AppCompatActivity(), NavigationBarView.OnItemSelectedListen
         binding.navBottomView.setOnItemSelectedListener(this)
         sectionPagerAdapter = MainPagerAdapter(this)
         binding.viewPager.adapter = sectionPagerAdapter
-        binding.viewPager.isUserInputEnabled = false
 
     }
 

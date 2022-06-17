@@ -107,7 +107,22 @@
                 android:paddingEnd="32dp"
                 android:text="@string/changeProfile"
                 android:textColor="@color/textColorMain"
-                android:textSize="12sp" />
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/quitButton"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:layout_below="@+id/editProfileButton"
+                android:layout_marginTop="22dp"
+                android:background="@drawable/back_edit_focused"
+                android:gravity="center"
+                android:padding="6dp"
+                android:paddingStart="32dp"
+                android:paddingEnd="32dp"
+                android:text="@string/quit"
+                android:textColor="@color/colorError"
+                android:textSize="15sp" />
 
         </RelativeLayout>
 

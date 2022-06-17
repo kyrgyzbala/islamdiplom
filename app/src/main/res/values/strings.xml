@@ -69,5 +69,6 @@
     <string name="ok">OK</string>
     <string name="userName">userName</string>
     <string name="changeProfile">Редактировать профиль</string>
+    <string name="quit">Выйти</string>
 
 </resources>
