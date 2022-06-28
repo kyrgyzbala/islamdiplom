@@ -31,11 +31,62 @@
 
     </com.google.android.material.appbar.AppBarLayout>
 
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/searchView"
+        android:layout_below="@+id/appBar"
+        app:layout_scrollFlags="scroll">
+
+        <EditText
+            android:id="@+id/searchEditText"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="12dp"
+            android:layout_marginBottom="12dp"
+            android:background="@drawable/back_button_gray_border"
+            android:fontFamily="@font/open_sans_semibold"
+            android:hint="@string/search"
+            android:imeOptions="actionSearch"
+            android:importantForAutofill="no"
+            android:inputType="textPersonName"
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp"
+            android:selectAllOnFocus="true"
+            android:textColor="@color/textColorMain"
+            android:textColorHint="@color/grayText"
+            android:textSize="18sp"
+            app:drawableEndCompat="@drawable/ic_search" />
+
+        <RelativeLayout
+            android:id="@+id/clearButton"
+            android:layout_width="32dp"
+            android:layout_height="44dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="14dp"
+            android:layout_marginEnd="16dp"
+            android:background="@color/colorWhite"
+            android:visibility="gone">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:contentDescription="@string/image"
+                android:src="@drawable/ic_clear_black_24dp" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@+id/appBar"
+        android:layout_below="@+id/searchView"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         tools:listitem="@layout/row_lecture_cats" />
 
